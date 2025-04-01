@@ -3,7 +3,7 @@
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
   --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
 
-  --button-primary-hover: #383838;
+  --button-primary-hover: hsl(103, 64%, 39%);
   --button-secondary-hover: #f2f2f2;
 
   display: flex;
@@ -21,8 +21,8 @@
     --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
     --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
+    --button-primary-hover: #cccccc;
+    --button-secondary-hover: #1d18cb92;
   }
 }
 
@@ -111,7 +111,7 @@ a.secondary {
   text-align: center;
   margin-bottom: 40px;
   background-color: #f0f8ff;
-  color: #333;
+  color: #090d7b;
   padding: 20px;
   text-align: center;
   font-size: 1.5rem;
@@ -121,7 +121,7 @@ a.secondary {
 
 .banner h1 {
   font-size: 2.5rem;
-  color: #333;
+  color: #ffeb09;
 }
 
 .banner p {
