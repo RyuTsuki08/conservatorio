@@ -21,8 +21,8 @@
     --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
     --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
 
-    --button-primary-hover: #cccccc;
-    --button-secondary-hover: #1d18cb92;
+    --button-primary-hover: hwb(0 80% 20%);
+    --button-secondary-hover: #2dcb1892;
   }
 }
 
@@ -111,7 +111,7 @@ a.secondary {
   text-align: center;
   margin-bottom: 40px;
   background-color: #f0f8ff;
-  color: #090d7b;
+  color: #6bf19f;
   padding: 20px;
   text-align: center;
   font-size: 1.5rem;
