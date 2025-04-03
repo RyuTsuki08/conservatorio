@@ -1,8 +1,10 @@
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import { Geist, Geist_Mono } from "next/font/google";
-import theme from "../../src/app/theme/theme";
-import "./styles/globals.css";
+"use client";
 
+import { ChakraProvider } from "@chakra-ui/react";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./styles/globals.css";
+import { Providers } from "./providers";
+import { metadata } from "./metadata";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,11 +15,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-export const metadata = {
-  title: "Conservatorio",
-  description: "App de conservatorio para la gestión de alumnos y profesores",
-};
 
 export default function RootLayout({ children }) {
   return (
@@ -30,9 +27,12 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <ChakraProvider theme={theme}>
-          <main>{children}</main>
-        </ChakraProvider>
+          <div id="modal-root">
+
+              {children}
+          
+          </div>
+       
       </body>
     </html>
   );
