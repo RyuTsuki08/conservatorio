@@ -3,7 +3,8 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./styles/globals.css";
-import { Providers } from "./providers";
+import { MantineProvider } from "@mantine/core";
+import theme from "./theme/theme";
 import { metadata } from "./metadata";
 
 const geistSans = Geist({
@@ -28,9 +29,9 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
           <div id="modal-root">
-
+            <MantineProvider theme={theme} withGlobalStyles withNormalizeCSS>
               {children}
-          
+            </MantineProvider>
           </div>
        
       </body>

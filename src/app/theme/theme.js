@@ -1,36 +1,15 @@
-// import { extendTheme } from "@chakra-ui/react";
+import { createTheme } from '@mantine/core';
 
-// const theme = extendTheme({
-//   colors: {
-//     primary: "#3182ce",
-//     red: "#EE0F0F",
-//   },
-//   breakpoints: {
-//     sm: "320px",
-//     md: "768px",
-//     lg: "960px",
-//     xl: "1200px",
-//   },
-//   semanticTokens: {
-//     colors: {
-//       danger: "red.500",
-//     },
-//   },
-//   styles: {
-//     global: {
-//       "html, body": {
-//         margin: 0,
-//         padding: 0,
-//         fontFamily: "Arial, sans-serif",
-//       },
-//     },
-//   },
-//   keyframes: {
-//     spin: {
-//       from: { transform: "rotate(0deg)" },
-//       to: { transform: "rotate(360deg)" },
-//     },
-//   },
-// });
+const theme = createTheme({
+  /** Your theme override here */
+  colorScheme: 'light',
+  primaryColor: 'blue',
+  fontFamily: 'Arial, sans-serif',
+  headings: { fontFamily: 'Arial, sans-serif' },
+  colors: {
+    // Add your custom colors here
+    brand: ['#f0f0f0', '#e0e0e0', '#d0d0d0', '#c0c0c0', '#b0b0b0'],
+  },
+});
 
-// export default theme;
+export default theme;
