@@ -1,8 +1,11 @@
-// Code: 2025.04.01
+// app/providers.tsx
 'use client'
 
 import { ChakraProvider } from '@chakra-ui/react';
-import theme from "./theme/theme";
+
+
+
+
 
 
 export function Providers({ children }) {
@@ -12,3 +15,4 @@ export function Providers({ children }) {
     </ChakraProvider>
   );
 }
+

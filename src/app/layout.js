@@ -5,35 +5,30 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./styles/globals.css";
 import { Providers } from "./providers";
 import { metadata } from "./metadata";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
+import Navbar from "./components/navbar/navbar";
+import { Box } from "@chakra-ui/react";
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content={metadata.description} />
-        <link rel="icon" href="/favicon.ico" />
-        <title>{metadata.title}</title>
-      </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-          <div id="modal-root">
+      <body>
+      
 
-              {children}
-          
-          </div>
+
+<Providers>
+
+
+<Box position = {'relative'} bgColor={'#92B4F4'} minH= {'100vh'}>  
+<Navbar />
+{children}
+
+</Box>
+
+</Providers>
+
        
-      </body>
+
+        </body>
     </html>
   );
 }
+
